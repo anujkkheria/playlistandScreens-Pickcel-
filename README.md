@@ -158,8 +158,12 @@ Base URL: `http://localhost:3000`
 - Skipped implementing full user CRUD and registration to keep the focus on auth + domain flows.
 - Kept `PUT /screens/:id` as a simple toggle for demo purposes (idempotent-ish, but not strictly). Real apps would accept an explicit boolean.
 - Stored `refreshTokenHash` per-user (single session) to keep it simple; multi-device sessions would require a token table.
-- Aggregated playlist listing to return `itemCount` only; detailed playlist retrieval (by id) isn’t implemented yet.
+- Aggregated playlist listing to return `itemCount` only; detailed playlist retrieval.
+- Playlist info is added
+- Edit existing playlist was skipped for time constrains
 - Seed runs on server startup for convenience; can be decoupled for stricter environments.
+- converted to MonoRepo from indivdual repos to ease the setup
+- added seeder with backend so user would not need to run seed script separatly
 
 ---
 
